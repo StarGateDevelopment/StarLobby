@@ -1,7 +1,7 @@
 # StarLobby
-Copyright© by CreeperBuildings, Julian Weinelt, PhastixTV
+Copyright &copy; 2023 by CreeperBuildings, Julian Weinelt, PhastixTV
 
-### Do not claim this plugin as your own
+### Do not claim this plugin as yours
 
 
 
