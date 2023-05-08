@@ -1,0 +1,21 @@
+join-message: ""
+leave-message: ""
+
+default-gamemode: ADVENTURE
+
+
+items:
+  0:
+    material: NETHER_STAR
+    amount: 1
+    displayname: ""
+    lore:
+      - ""
+      - ""
+    action: NONE
+    action-properties: ""
+
+
+
+# Don't touch this!!! This can break the plugin!
+config-version: "v0.1"

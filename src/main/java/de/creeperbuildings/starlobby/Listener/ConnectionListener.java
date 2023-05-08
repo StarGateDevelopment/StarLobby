@@ -1,6 +1,5 @@
 package de.creeperbuildings.starlobby.Listener;
 
-import de.creeperbuildings.starlobby.Main;
 import org.bukkit.GameMode;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -9,13 +8,6 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.player.PlayerQuitEvent;
 
 public class ConnectionListener implements Listener {
-
-    private Main main;
-
-    public ConnectionListener(Main main) {
-        this.main = main;
-
-    }
     @EventHandler
     public void onJoin(PlayerJoinEvent e) {
         Player p = e.getPlayer();

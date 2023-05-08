@@ -101,7 +101,6 @@ public class ItemBuilder {
     }
 
     /**
-     * Initalizes the ItemBuilder with an already existing {@link de.codeblocksmc.deathrun.util.ItemBuilder}
      * @deprecated Use the already initalized {@code ItemBuilder} Instance to improve performance
      */
     @Deprecated
