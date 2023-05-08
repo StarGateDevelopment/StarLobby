@@ -1,7 +1,7 @@
 # StarLobby
 Copyright© by CreeperBuildings, Julian Weinelt, PhastixTV
 
-### Do not claim this as your own
+### Do not claim this plugin as your own
 
 
 
@@ -38,3 +38,5 @@ Copyright© by CreeperBuildings, Julian Weinelt, PhastixTV
 - [CloudNET-Support](https://cloudnetservice.eu/de/)
 - Full documented Developer-API
 
+## Wiki
+You will find help for installation and the developer-API including the Java-Docs in the [Wiki](docs/general)!

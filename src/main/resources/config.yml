@@ -16,6 +16,14 @@ items:
     action-properties: ""
 
 
+data-storing: JSON
+# Login information for MySQL
+mysql:
+  hostname: ""
+  user: ""
+  password: ""
+  port: 3306
+  database-name: ""
 
-# Don't touch this!!! This can break the plugin!
+# Don't touch this!!! This will break the plugin if you change it!
 config-version: "v0.1"
