@@ -16,9 +16,6 @@ public class ConnectionListener implements Listener {
         this.main = main;
 
     }
-
-
-
     @EventHandler
     public void onJoin(PlayerJoinEvent e) {
         Player p = e.getPlayer();
