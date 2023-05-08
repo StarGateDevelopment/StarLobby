@@ -1,0 +1,6 @@
+name: StarLobby
+version: '${project.version}'
+main: de.creeperbuildings.starlobby.Main
+api-version: 1.19
+authors: [CreeperBuildings, PhastixTV, ech0_Schokolade]
+description: Very Nice Lobby Plugin
