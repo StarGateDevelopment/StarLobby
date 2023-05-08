@@ -1,5 +1,6 @@
 package de.creeperbuildings.starlobby;
 
+import de.creeperbuildings.starlobby.scoreboard.ScoreboardManager;
 import org.bukkit.configuration.InvalidConfigurationException;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -11,6 +12,7 @@ import java.io.IOException;
 public final class Main extends JavaPlugin {
 
     private static Main plugin;
+    private static ScoreboardManager scoreboardManager;
 
     private YamlConfiguration messages;
 
@@ -54,5 +56,9 @@ public final class Main extends JavaPlugin {
 
     public static Main plugin() {
         return plugin;
+    }
+
+    public static ScoreboardManager getScoreboardManager() {
+        return scoreboardManager;
     }
 }
