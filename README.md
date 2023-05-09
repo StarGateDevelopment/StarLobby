@@ -19,20 +19,16 @@ Copyright &copy; 2023 by CreeperBuildings, Julian Weinelt, PhastixTV
 
 
 ## Features: (All Features are editable in config.yml)
-- Join and Leave Messages
-- Scoreboard
-- Blocked Events like Block Break or Place
+- Custom Join and Leave Messages
+- Custom Scoreboard (also per-permission!)
 - Custom Tablist
 - Server Navigation
 - Player Hider
-- Ender Pearl in Lobby
 - Join Signs (With CloudNET-Signs Support)
 - Custom /help Command
 - /gm Command
 - /vanish Command
 - /hub, /l, /lobby Command
-- Server Information Book
-- World Disabler in (config.yml)
 - MySQL Support
 - Bungee-Cord Support
 - [CloudNET-Support](https://cloudnetservice.eu/de/)
@@ -40,3 +36,6 @@ Copyright &copy; 2023 by CreeperBuildings, Julian Weinelt, PhastixTV
 
 ## Wiki
 You will find help for installation and the developer-API including the Java-Docs in the [Wiki](docs/general)!
+
+## Support
+If you need support you can join on our Discord-Server: [Click me!](https://dc.codeblocksmc.de/)
