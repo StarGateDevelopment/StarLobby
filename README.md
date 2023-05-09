@@ -39,3 +39,32 @@ You will find help for installation and the developer-API including the Java-Doc
 
 ## Support
 If you need support you can join on our Discord-Server: [Click me!](https://dc.codeblocksmc.de/)
+
+## Developer API
+First, add the Maven Repository:
+```XML
+<repository>
+  <id>cbmc-repository-starlobby</id>
+  <name>CodeBlocksMC Repository</name>
+  <url>http://play.codeblocksmc.de:8181/starlobby</url>
+</repository>
+```
+Alternatively, you can use Gradle:
+```KOTLIN
+maven {
+url = uri("http://play.codeblocksmc.de:8181/starlobby")
+}
+```
+
+Now, add StarLobby as a dependency:
+```XML
+<dependency>
+  <groupId>de.creeperbuildings</groupId>
+  <artifactId>StarLobby</artifactId>
+  <version>1.0</version>
+</dependency>
+```
+Or with Gradle:
+```KOTLIN
+implementation("de.creeperbuildings:StarLobby:1.0")
+```
