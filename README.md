@@ -19,9 +19,8 @@ Copyright &copy; 2023 by CreeperBuildings, Julian Weinelt, PhastixTV
 
 
 ## Features: (All Features are editable in config.yml)
-- Join and Leave Messages
+- Configurable Join and Leave Messages
 - Scoreboard
-- Blocked Events like Block Break or Place
 - Custom Tablist
 - Server Navigation
 - Player Hider
