@@ -1,5 +1,5 @@
 # StarLobby
-Copyright &copy; 2023 by CreeperBuildings, JustCody, PhastixTV
+Copyright &copy; 2023 StarGateDevelopment
 
 ### Do not claim this plugin as yours
 
