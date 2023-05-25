@@ -14,9 +14,6 @@ Copyright &copy; 2023 by CreeperBuildings, JustCody, PhastixTV
     \___|  |__|  |__|__||__|\_||_____| \___/ |_____||_____||____/
 
 
-## IMPORTANT:
-### This Plugin was made with &heartsuit;
-
 
 ## Features: (All Features are editable in config.yml)
 - Custom Join and Leave Messages
