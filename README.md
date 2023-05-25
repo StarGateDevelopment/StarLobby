@@ -66,6 +66,6 @@ Or with Gradle:
 implementation("de.creeperbuildings:StarLobby:1.0")
 ```
 
-##About us
+## About us
 Star Lobby is a product by StarGate Development. We are three hobby developers who make plugins for the community and individual servers.
 Join our Discord server here: coming soon
