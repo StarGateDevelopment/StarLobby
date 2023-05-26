@@ -1,10 +1,15 @@
 package de.creeperbuildings.starlobby;
 
+import de.creeperbuildings.starlobby.Listener.ConnectionListener;
+import de.creeperbuildings.starlobby.Listener.DamageListener;
+import de.creeperbuildings.starlobby.Listener.RainListener;
+import de.creeperbuildings.starlobby.commands.GamemodeCommand;
+import de.creeperbuildings.starlobby.commands.HelpCommand;
 import de.creeperbuildings.starlobby.scoreboard.ScoreboardManager;
+import org.bukkit.Bukkit;
 import org.bukkit.configuration.InvalidConfigurationException;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.yaml.snakeyaml.error.YAMLException;
 
 import java.io.File;
 import java.io.IOException;
@@ -42,6 +47,21 @@ public final class Main extends JavaPlugin {
         } catch (IOException | InvalidConfigurationException e) {
             getLogger().severe("An error occurred while loading messages.yml!" + e.getMessage());
         }
+
+        registerCommands();
+        registerEventListeners();
+    }
+
+
+    public void registerEventListeners() {
+        Bukkit.getPluginManager().registerEvents(new DamageListener(), this);
+        Bukkit.getPluginManager().registerEvents(new ConnectionListener(), this);
+        Bukkit.getPluginManager().registerEvents(new RainListener(), this);
+    }
+
+    public void registerCommands() {
+        getCommand("gma").setExecutor(new GamemodeCommand());
+        getCommand("help").setExecutor(new HelpCommand());
     }
 
     @Override

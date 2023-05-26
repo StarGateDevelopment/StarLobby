@@ -22,3 +22,14 @@ permissions:
               - gmsp
           vanish:
             description: Vanish Command
+
+
+commands:
+  gma:
+    aliases:
+      - gmc
+      - gms
+      - gmsp
+  help:
+    aliases:
+      - h

@@ -1,8 +1,8 @@
 name: StarLobby
-version: '1.1'
+version: '1.0'
 main: de.creeperbuildings.starlobby.Main
 api-version: 1.13
-authors: [CreeperBuildings, PhastixTV, ProJakob]
+authors: [CreeperBuildings, PhastixTV, ech0_Schokolade, Julian Weinelt]
 description: Very Nice Lobby Plugin
 
 
@@ -10,9 +10,6 @@ permissions:
   starlobby:
     children:
       command:
-        hub:
-        lobby:
-        l:
         children:
           help:
             default: true
@@ -25,3 +22,14 @@ permissions:
               - gmsp
           vanish:
             description: Vanish Command
+
+
+commands:
+  gma:
+    aliases:
+      - gmc
+      - gms
+      - gmsp
+  help:
+    aliases:
+      - h

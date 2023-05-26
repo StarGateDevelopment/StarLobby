@@ -20,6 +20,15 @@ items:
     action: NONE
     action-properties: ""
 
+join-position:
+  x: 0
+  y: 0
+  z: 0
+  world: "world"
+  yaw: 0
+  pitch: 0
+
+
 # How data should be stored. Available: JSON, MYSQL, H2, MONGODB, MARIADB
 data-storing: JSON
 
