@@ -15,6 +15,7 @@ public final class Main extends JavaPlugin {
     private static ScoreboardManager scoreboardManager;
 
     private YamlConfiguration messages;
+    public static String prefix = "";
 
 
 
