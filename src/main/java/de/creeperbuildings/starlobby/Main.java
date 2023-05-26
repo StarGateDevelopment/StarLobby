@@ -1,30 +1,64 @@
 package de.creeperbuildings.starlobby;
 
-import org.bukkit.Bukkit;
+import de.creeperbuildings.starlobby.scoreboard.ScoreboardManager;
+import org.bukkit.configuration.InvalidConfigurationException;
+import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.yaml.snakeyaml.error.YAMLException;
+
+import java.io.File;
+import java.io.IOException;
 
 public final class Main extends JavaPlugin {
-    private final String prefix = "[§aLOBBY]";
-    private final String noPerms = prefix + "§c§lYou don't have the Permissions to do this.";
+
+    private static Main plugin;
+    private static ScoreboardManager scoreboardManager;
+
+    private YamlConfiguration messages;
+
 
 
     @Override
-    public void onEnable() {
-        Bukkit.getConsoleSender().sendMessage(prefix + "§aThe Lobby Plugin was successfully started.");
+    public void onLoad() {
+        plugin = this;
+    }
 
+    @Override
+    public void onEnable() {
+        getLogger().info("Starting StarLobby...");
+        getLogger().info("   _____ _             _           _     _           ");
+        getLogger().info("  / ____| |           | |         | |   | |          ");
+        getLogger().info(" | (___ | |_ __ _ _ __| |     ___ | |__ | |__  _   _ ");
+        getLogger().info("  \\___ \\| __/ _` | '__| |    / _ \\| '_ \\| '_ \\| | | |");
+        getLogger().info("  ____) | || (_| | |  | |___| (_) | |_) | |_) | |_| |");
+        getLogger().info(" |_____/ \\__\\__,_|_|  |______\\___/|_.__/|_.__/ \\__, |");
+        getLogger().info("                                                __/ |");
+        getLogger().info("                                               |___/ ");
+
+        saveResource("messages.yml", false);
+        try {
+            messages.load(new File(plugin().getDataFolder().getAbsolutePath() + "/messages.yml"));
+        } catch (IOException | InvalidConfigurationException e) {
+            getLogger().severe("An error occurred while loading messages.yml!" + e.getMessage());
+        }
     }
 
     @Override
     public void onDisable() {
-
-        Bukkit.getConsoleSender().sendMessage(prefix + "§cThe Plugin was shutdowned :(");
+        getLogger().info("Goodbye!");
     }
 
-    public String getPrefix() {
-        return prefix;
+
+
+    public YamlConfiguration getMessages() {
+        return messages;
     }
 
-    public String getNoPerms() {
-        return noPerms;
+    public static Main plugin() {
+        return plugin;
+    }
+
+    public static ScoreboardManager getScoreboardManager() {
+        return scoreboardManager;
     }
 }
