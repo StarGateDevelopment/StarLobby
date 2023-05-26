@@ -1,0 +1,76 @@
+join-message: ""
+leave-message: ""
+
+
+
+default-gamemode: ADVENTURE
+
+items:
+  0:
+    material: NETHER_STAR
+    amount: 1
+    displayname: ""
+    lore:
+      - ""
+      - ""
+    action: NONE
+    action-properties: ""
+
+
+data-storing: JSON
+# Login information for MySQL
+mysql:
+  hostname: ""
+  user: ""
+  password: ""
+  port: 3306
+  database-name: ""
+
+
+scoreboard:
+  # Do you want to use our scoreboard integration?
+  enabled: true
+  # The scoreboard will not be displayed in this worlds
+  blacklisted-worlds: []
+  # How often the Scoreboard should be refreshed (in Ticks)
+  refresh-rate: 1
+  # Title of Scoreboard (Animation Support!)
+  title:
+    - ""
+    - "" # Delete this line if you don't want animations
+  # The content of your scoreboard. You can also use Placeholders
+  content:
+    - ""
+    - ""
+    - ""
+
+commands:
+  help:
+    enabled: true
+    display-list-of-commands: true
+    list-of-commands: ["/msg", "/lobby"]
+    display-custom-text: false
+    custom-text: ""
+
+inventories:
+  server-selector:
+    filler:
+      material: LIGHT_GRAY_STAINED_GLASS_PANE
+      amount: 1
+      displayname: " "
+      lore:
+        - ""
+      actions: []
+
+tablist:
+  speed: 1 # 0 to disable Tablist
+  world: "world"
+  header:
+    - "&cExample1"
+    - "Example2"
+  footer:
+    - "Example1"
+    - "§aExample2"
+
+# Don't touch this!!! This will break the plugin if you change it!
+config-version: "v0.1"
