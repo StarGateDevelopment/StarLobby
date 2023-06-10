@@ -2,13 +2,11 @@ package de.creeperbuildings.starlobby;
 
 import de.creeperbuildings.starlobby.Listener.ConnectionListener;
 import de.creeperbuildings.starlobby.Listener.DamageListener;
-import de.creeperbuildings.starlobby.Listener.RainListener;
+import de.creeperbuildings.starlobby.Listener.GameRuleListener;
 import de.creeperbuildings.starlobby.commands.GamemodeCommand;
 import de.creeperbuildings.starlobby.commands.HelpCommand;
 import de.creeperbuildings.starlobby.scoreboard.ScoreboardManager;
 import org.bukkit.Bukkit;
-import org.bukkit.command.Command;
-import org.bukkit.command.SimpleCommandMap;
 import org.bukkit.configuration.InvalidConfigurationException;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -60,7 +58,7 @@ public final class Main extends JavaPlugin {
     public void registerEventListeners() {
         Bukkit.getPluginManager().registerEvents(new DamageListener(), this);
         Bukkit.getPluginManager().registerEvents(new ConnectionListener(), this);
-        Bukkit.getPluginManager().registerEvents(new RainListener(), this);
+        Bukkit.getPluginManager().registerEvents(new GameRuleListener(), this);
     }
 
     public void registerCommands() {

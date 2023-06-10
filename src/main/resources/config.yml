@@ -134,5 +134,13 @@ tablist:
     - "Example1"
     - "§aExample2"
 
+# Here you can deactivate some game rules.
+disable-weather: true
+spawn-mobs: false
+mob-griefing: false
+spawn-warden: false
+
+
+
 # Don't touch this!!! This will break the plugin if you change it!
 config-version: "v0.2"
