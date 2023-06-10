@@ -1,6 +1,7 @@
 # StarLobby
 
 Welcome to the official GitHub Page of StarLobby, a small but feature-packed lobby plugin.
+Official download site: [View on SpigotMC.org](https://spigotmc.org/resources/starlobby.110067/)
 
 Copyright &copy; 2023 by CreeperBuildings, PhastixTV, ProJakob, JustCody
 
