@@ -4,11 +4,16 @@ main: de.creeperbuildings.starlobby.Main
 api-version: 1.13
 authors: [CreeperBuildings, PhastixTV, ech0_Schokolade, Julian Weinelt]
 description: A complete feature-packed lobby plugin.
-
+depend:
+  - PlaceholderAPI
 
 permissions:
   starlobby:
     children:
+      admin:
+        children:
+          - notify-update
+          - main-command
       command:
         children:
           help:

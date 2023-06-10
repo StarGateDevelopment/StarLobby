@@ -7,11 +7,14 @@ import de.creeperbuildings.starlobby.commands.GamemodeCommand;
 import de.creeperbuildings.starlobby.commands.HelpCommand;
 import de.creeperbuildings.starlobby.scoreboard.ScoreboardManager;
 import org.bukkit.Bukkit;
+import org.bukkit.command.Command;
+import org.bukkit.command.SimpleCommandMap;
 import org.bukkit.configuration.InvalidConfigurationException;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public final class Main extends JavaPlugin {
@@ -21,6 +24,7 @@ public final class Main extends JavaPlugin {
 
     private YamlConfiguration messages;
     public static String prefix = "";
+    public static String latestVersion = "v0.2";
 
 
 
@@ -41,11 +45,11 @@ public final class Main extends JavaPlugin {
         getLogger().info("                                                __/ |");
         getLogger().info("                                               |___/ ");
 
-        saveResource("messages.yml", false);
         try {
-            messages.load(new File(plugin().getDataFolder().getAbsolutePath() + "/messages.yml"));
+            messages.load(new File(plugin().getDataFolder(), "messages.yml"));
         } catch (IOException | InvalidConfigurationException e) {
             getLogger().severe("An error occurred while loading messages.yml!" + e.getMessage());
+            saveResource("messages.yml", false);
         }
 
         registerCommands();
@@ -81,5 +85,20 @@ public final class Main extends JavaPlugin {
 
     public static ScoreboardManager getScoreboardManager() {
         return scoreboardManager;
+    }
+
+    public void reloadConfigFiles() {
+        try {
+            messages.load(new File(plugin().getDataFolder(), "messages.yml"));
+            reloadConfig();
+        } catch (FileNotFoundException e) {
+            getLogger().severe("Could not load messages.yml! Trying to create it...");
+            saveResource("messages.yml", false);
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (InvalidConfigurationException e) {
+            getLogger().severe("One of the config files has problems. Is the form correct? " + e.getMessage());
+        }
+
     }
 }
