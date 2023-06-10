@@ -89,4 +89,4 @@ tablist:
     - "§aExample2"
 
 # Don't touch this!!! This will break the plugin if you change it!
-config-version: "v0.1"
+config-version: "v0.2"
