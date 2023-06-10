@@ -1,4 +1,7 @@
 # StarLobby
+
+Welcome to the official GitHub Page of StarLobby, a small but feature-packed lobby plugin.
+
 Copyright &copy; 2023 by CreeperBuildings, PhastixTV, ProJakob, JustCody
 
 ### Do not claim this plugin as yours
@@ -33,6 +36,9 @@ Copyright &copy; 2023 by CreeperBuildings, PhastixTV, ProJakob, JustCody
 
 ## Wiki
 You will find help for installation and the developer-API including the Java-Docs in the [Wiki](docs/general)!
+
+## Issues / Problems
+Please report ANY problems, issues, bugs on the page issues. Otherwise we mostly can't help you!
 
 ## Support
 If you need support you can join on our Discord-Server: [Click me!](https://discord.gg/TuuFSU5mDD)
