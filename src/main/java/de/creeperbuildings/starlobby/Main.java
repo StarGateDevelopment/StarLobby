@@ -20,7 +20,7 @@ public final class Main extends JavaPlugin {
     private static Main plugin;
     private static ScoreboardManager scoreboardManager;
 
-    private YamlConfiguration messages;
+    private YamlConfiguration messages = new YamlConfiguration();
     public static String prefix = "";
     public static String latestVersion = "v0.2";
 
@@ -33,6 +33,7 @@ public final class Main extends JavaPlugin {
 
     @Override
     public void onEnable() {
+        saveDefaultConfig();
         getLogger().info("Starting StarLobby...");
         getLogger().info("   _____ _             _           _     _           ");
         getLogger().info("  / ____| |           | |         | |   | |          ");
@@ -43,11 +44,11 @@ public final class Main extends JavaPlugin {
         getLogger().info("                                                __/ |");
         getLogger().info("                                               |___/ ");
 
+        saveResource("messages.yml", false);
         try {
-            messages.load(new File(plugin().getDataFolder(), "messages.yml"));
+            messages.load(new File(plugin().getDataFolder().getAbsolutePath() + "/messages.yml"));
         } catch (IOException | InvalidConfigurationException e) {
             getLogger().severe("An error occurred while loading messages.yml!" + e.getMessage());
-            saveResource("messages.yml", false);
         }
 
         registerCommands();

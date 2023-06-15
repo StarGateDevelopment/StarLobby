@@ -1,5 +1,5 @@
 name: StarLobby
-version: '${project.version}'
+version: 0.3-ALPHA
 main: de.creeperbuildings.starlobby.Main
 api-version: 1.13
 authors: [CreeperBuildings, PhastixTV, ech0_Schokolade, Julian Weinelt]
