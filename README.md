@@ -39,7 +39,7 @@ Copyright &copy; 2023 by CreeperBuildings, PhastixTV, ProJakob, JustCody
 You will find help for installation and the developer-API including the Java-Docs in the [Wiki](docs/general)!
 
 ## Issues / Problems
-Please report ANY problems, issues, bugs on the page issues. Otherwise we mostly can't help you!
+Please report ANY problems, issues, bugs on the page [issues](issues). Otherwise we mostly can't help you!
 
 ## Support
 If you need support you can join on our Discord-Server: [Click me!](https://discord.gg/TuuFSU5mDD)
