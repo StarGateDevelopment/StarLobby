@@ -1,32 +1,26 @@
 # Do you want to be notified when a newer version available?
 check-for-updates: true
 
+# Message that should be displayed when a player joins the server.
+# Available placeholders: %playername%
 join-message: ""
+# Message that should be displayed when a player leaves the server.
+# Available placeholders: %playername%
 leave-message: ""
 
 
 # Gamemode on join
 default-gamemode: ADVENTURE
 
-# Items given to a player on join.
-items:
-  0:
-    material: NETHER_STAR
-    amount: 1
-    displayname: ""
-    lore:
-      - ""
-      - ""
-    action: NONE
-    action-properties: ""
-
+# Position where players should be teleported on join.
 join-position:
-  x: 0
-  y: 0
-  z: 0
-  world: "world"
-  yaw: 0
-  pitch: 0
+  enable-teleport: true # Whether you want the player to be teleported.
+  x: 0 # X-Coordinate
+  y: 0 # Y-Coordinate
+  z: 0 # Z-Coordinate
+  world: "world" # Name of the word
+  yaw: 0 # YAW-Value
+  pitch: 0 # PITCH-Value
 
 
 # How data should be stored. Available: JSON, MYSQL, H2, MONGODB, MARIADB
@@ -50,15 +44,18 @@ scoreboard:
   invert-blacklist: false
   # How often the Scoreboard should be refreshed (in Ticks)
   refresh-rate: 1
-  # Title of Scoreboard (Animation Support!)
-  title:
-    - ""
-    - "" # Delete this line if you don't want animations
-  # The content of your scoreboard. You can also use Placeholders
-  content:
-    - ""
-    - ""
-    - ""
+  # Default Scoreboard for Players. Create any others like that.
+  default:
+    permission: "" # Not required in this case.
+    # Title of Scoreboard (Animation Support!)
+    title:
+      - ""
+      - "" # Delete this line if you don't want animations
+    # The content of your scoreboard. You can also use Placeholders
+    content:
+      - ""
+      - ""
+      - ""
 
 commands:
   help:
@@ -67,20 +64,69 @@ commands:
     list-of-commands: ["/msg", "/lobby"]
     display-custom-text: false
     custom-text: ""
+  main-command: # Don't remove this.
+    answers:
+      no-permission: "§cYou don't have the permission for this command." # If the user has the permission, the command
+      # will show a list of commands by this plugin.
 
 inventories:
+  # Inventory of the server selector.
   server-selector:
+    # Amount of the rows of this inventory.
+    rows: 6
+    # Filler item. Will all slots except otherwise set
     filler:
+      # Material of this item. See TODO Add link
       material: LIGHT_GRAY_STAINED_GLASS_PANE
+      # Amount of this item.
       amount: 1
+      # Displayname of this item.
       displayname: " "
+      # Lore of this item. This is the text shown below of the display name
       lore:
         - ""
+      # What should be done when clicked?
       actions: []
 
+    0: # Always name your items here by the slot.
+     material: GOLDEN_APPLE
+     displayname: "Example Item"
+     lore:
+       - "Example lore"
+       - "Multiple lore support!"
+       - "§eAlso color support!"
+    # Define your actions here.
+    actions:
+      # Types available: left-click, right-click
+      left-click:
+        # Action. Available: CONNECT, WORLD, MSG, CMD, CONSOLE
+        action: CONNECT # Action that should be done.
+        value: "Example-1" # Name of the server, in this case.
+
+# Items that should be displayed in the hotbar.
+hotbar:
+  # Name the sections by the slot number.
+  0:
+    # Material name. See TODO: Add Link
+    material: NETHER_STAR
+    # Amount of this item.
+    amount: 1
+    # Display name of the item.
+    displayname: "§aServer Selector"
+    # Lore when hovering over this item shown below of the display name.
+    lore:
+      - ""
+    # Action that should be done when interacting with this item
+    action:
+      # Type of the action. Available: MENU, CMD, MSG
+      type: MENU
+      # Value of the action. For example command, message or menu name.
+      value: "server-selector"
+
 tablist:
-  speed: 1 # Update Rate. 0 To disable
-  world: "world"
+  enable: true
+  speed: 1 # Update Rate. 0 To disable. Will be updated in coming updates
+  world: "world" # Available in next updates.
   header:
     - "&cExample1"
     - "Example2"
@@ -88,5 +134,13 @@ tablist:
     - "Example1"
     - "§aExample2"
 
+# Here you can deactivate some game rules.
+disable-weather: true
+spawn-mobs: false
+mob-griefing: false
+spawn-warden: false
+
+
+
 # Don't touch this!!! This will break the plugin if you change it!
-config-version: "v0.1"
+config-version: "v0.2"
